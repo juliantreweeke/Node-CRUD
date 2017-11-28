@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<body>
+  
+  <h1>Simple Node CRUD</h1>
+
+  <ul class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <section class="container">
+    <div class="col-md-12">
+    <form action="/quotes" method="POST">
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="quote" name="quote">
+      </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    </div>
+  </section>
+  
+  
+</body>
+</html>
